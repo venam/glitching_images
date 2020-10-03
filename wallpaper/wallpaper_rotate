@@ -1,0 +1,8 @@
+speed=0.5
+while : ; do
+	for i in ` ls images/world_map* -v ` ; do
+		echo "$i" ;
+		hsetroot -solid '#A9DFF9' -full "$i"
+		sleep $speed ;
+	done ;
+done

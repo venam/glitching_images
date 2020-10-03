@@ -1,0 +1,1 @@
+convert -quality 2 ../world_map.jpg world_map_compressed.jpg
