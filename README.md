@@ -39,5 +39,6 @@ This repo contains scripts and ideas about glitching images
 - [accidental glitches](https://www.reddit.com/r/glitchart/)
 - [intentional glitches](https://www.reddit.com/r/glitch_art/)
 - [video datamoshing](https://www.reddit.com/r/datamoshing/)
+- [glitchlock](https://github.com/xero/glitchlock)
 
 
