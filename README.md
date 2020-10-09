@@ -27,6 +27,7 @@ This repo contains scripts and ideas about glitching images
 - <http://blog.animalswithinanimals.com/2008/09/databending-and-glitch-art-primer-part.html>
 - <http://blog.animalswithinanimals.com/2014/10/databending-and-glitch-art-primer-part.html>
 - [sonification](https://en.wikipedia.org/wiki/Sonification)
+- [sox instead of audacity](https://maryknize.com/blog/glitch_art_with_sox_imagemagick_and_vim/)
 - <https://github.com/aguaviva/micro-jpeg-visualizer/>
 - <https://github.com/corkami/formats/blob/master/image/jpeg.md>
 - <https://yasoob.me/posts/understanding-and-writing-jpeg-decoder-in-python/>
