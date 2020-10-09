@@ -1,0 +1,3 @@
+[submodule "lock/glitchlock"]
+	path = lock/glitchlock
+	url = https://github.com/xero/glitchlock
