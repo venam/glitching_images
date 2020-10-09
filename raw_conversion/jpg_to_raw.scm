@@ -13,6 +13,7 @@
                     drawable 
                     out_filename 
                     out_filename 
-                    (if interleaved? 0 3) 
+                    (if interleaved? 0 6) 
                     0)
+    (gimp-item-delete drawable)
     (gimp-image-delete image)))
