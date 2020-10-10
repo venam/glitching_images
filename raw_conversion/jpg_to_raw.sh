@@ -3,4 +3,4 @@
 XDG_CONFIG_HOME=$PWD
 export XDG_CONFIG_HOME
 echo $XDG_CONFIG_HOME
-gimp -i -b "(jpg_to_raw \"$1\" \"$2\" #t)" -b '(gimp-quit 0)'
+gimp -i -b "(jpg->raw \"$1\" \"$2\" #t)" -b '(gimp-quit 0)'
