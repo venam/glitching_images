@@ -3,17 +3,30 @@
 ;
 ;  for a list of all procedure used check: help > procedure browser
 ;
-(define (jpg_to_raw in_filename out_filename interleaved?)
-  (let* ((image (car (gimp-file-load RUN-NONINTERACTIVE in_filename in_filename)))
-         (drawable (car (gimp-image-get-active-layer image))))
-    ; image-type: RAW_RGB (0), RAW_PLANAR (3)
-    ; palette-type { RAW_PALETTE_RGB (0), RAW_PALETTE_BGR (1) }
-    (file-raw-save2 RUN-NONINTERACTIVE 
-                    image 
-                    drawable 
-                    out_filename 
-                    out_filename 
-                    (if interleaved? 0 6) 
-                    0)
-    (gimp-item-delete drawable)
-    (gimp-image-delete image)))
+
+(define (convert-image in-filename out-filename save . save-args)
+ (let* ((image (car (gimp-file-load RUN-NONINTERACTIVE out-filename in-filename))))
+       (drawable (car (gimp-image-get-active-layer image)))
+  (apply save 
+         (append (list RUN-NONINTERACTIVE image drawable out-filename out-filename)
+                 save-args))
+  (gimp-item-delete drawable)
+  (gimp-image-delete image)))
+
+
+(define +raw-image-rgb+ 0)
+(define +raw-image-planar+ 3)
+
+(define +raw-palette-rgb+ 0)
+(define +raw-palette-bgr+ 1)
+
+(define (jpg->raw in-filename out-filename interleaved? invert-palette?)
+  (convert-image 
+    in-filename
+    out-filename
+    file-raw-save2
+    (if interleaved?
+      +raw-image-rgb+
+      +raw-image-planar+)
+    +raw-palette-rgb+))
+                 
