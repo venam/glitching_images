@@ -7,7 +7,7 @@
 # The run mode { RUN-INTERACTIVE (0) }
 if [ $# -lt 4 ]
 then
-	echo "$0: image.jpg image.data widthxheight [1|0, for interleaved or planar]"
+	echo "$0: image.data image.jpg widthxheight [1|0, for interleaved or planar]"
 	exit
 fi
 
